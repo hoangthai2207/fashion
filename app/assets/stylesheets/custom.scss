@@ -1,0 +1,331 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+padding-top: 0px;
+}
+section {
+overflow: auto;
+}
+textarea {
+resize: vertical;
+}
+.center {
+text-align: center;
+}
+.center h1 {
+margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+line-height: 1;
+}
+h1 {
+font-size: 3em;
+letter-spacing: -2px;
+margin-bottom: 30px;
+text-align: center;
+}
+h2 {
+font-size: 1.2em;
+letter-spacing: -1px;
+margin-bottom: 30px;
+text-align: center;
+font-weight: normal;
+color: #777;
+}
+p {
+font-size: 1.1em;
+line-height: 1.7em;
+}
+
+#logo {
+float: left;
+margin-right: 10px;
+font-size: 1.7em;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: -1px;
+padding-top: 9px;
+font-weight: bold;
+}
+#logo:hover {
+color: #fff;
+text-decoration: none;
+}
+
+footer {
+margin-top: 45px;
+padding-top: 5px;
+border-top: 1px solid #eaeaea;
+color: #777;
+}
+footer a {
+color: #555;
+}
+footer a:hover {
+color: #222;
+}
+footer small {
+float: left;
+}
+footer ul {
+float: right;
+list-style: none;
+}
+footer ul li {
+float: left;
+margin-left: 15px;
+}
+
+aside {
+section.user_info {
+margin-top: 20px;
+}
+section {
+padding: 10px 0;
+margin-top: 20px;
+&:first-child {
+border: 0;
+padding-top: 0;
+}
+span {
+display: block;
+margin-bottom: 3px;
+line-height: 1;
+}
+h1 {
+font-size: 1.4em;
+text-align: left;
+letter-spacing: -1px;
+margin-bottom: 3px;
+margin-top: 0px;
+}
+}
+}
+.gravatar {
+float: left;
+margin-right: 10px;
+}
+.gravatar_edit {
+margin-top: 15px;
+}
+input, textarea, select, .uneditable-input {
+border: 1px solid #bbb;
+width: 100%;
+margin-bottom: 15px;
+
+}
+input {
+height: auto !important;
+}
+
+#error_explanation {
+color: red;
+ul {
+color: red;
+margin: 0 0 30px 0;
+}
+}
+.field_with_errors {
+@extend .has-error;
+.form-control {
+color: $state-danger-text;
+}
+}
+
+.checkbox {
+margin-top: -10px;
+margin-bottom: 10px;
+span {
+margin-left: 20px;
+font-weight: normal;
+}
+}
+#session_remember_me {
+width: auto;
+margin-left: 0;
+}
+
+
+
+
+ /*web bán hàng*/
+
+ *{
+  margin:0px;
+  padding:0px;
+}
+body{
+  background-image:url(Picture/background.jpg);
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  font-family:"Times New Roman", Times, serif;
+}
+#menu{
+  width:960px;
+  margin:0 auto;
+}
+header{
+  position:relative;
+}
+.menu{
+  position:absolute;
+  top:0px;
+  right:0px;
+}
+
+article{
+  float:right;
+  width:700px;
+}
+aside{
+  float:left;
+  width:260px;
+}
+footer{
+  clear:both;
+}
+.ketthuc{
+  font-weight:bold;
+  font-size:20px;
+}
+.ketthuc a{
+  text-decoration:none;
+  color:#FF9900;
+  text-transform:uppercase;
+}
+footer b{
+  text-transform:uppercase;
+  color:#808080;
+  font-size:18px;
+}
+footer p{
+  font-style:italic;
+  color:#000;
+  font-weight:bold;
+}
+.chuchay1{
+  background-color:#f42b5d;
+  color:#FFF;
+  text-transform:uppercase;
+  height:40px;
+  line-height:40px;
+  font-size:24px;
+  border-radius:10px;
+}
+.menu1{
+  padding-left:30px;
+  background-color:#f3285b;
+  border-radius:10px;
+}
+.menu1 ul li{
+  padding:10px;
+}
+.menu1 ul li a{
+  text-decoration:none;
+  color:#FFF;
+}
+.menu1 ul li a:hover{
+  color:#FF0;
+}
+.box{
+  width:225px;
+  float:left;
+  border:1px solid #333;
+  margin:0px 3px;
+}
+.button{
+  background-color:#f3285b;
+  height:30px;
+  line-height:30px;
+  border-radius:5px;
+  color:#FFF;
+  padding:0 5px;
+}
+.box a{
+  text-decoration:none;
+  color:#000;
+}
+.box a:hover{
+  color:#F60;
+}
+.box p{
+  text-align:center;
+  color:#333;
+  font-weight:bold;
+}
+.box h4{
+  color:#F00;
+  text-align:center;
+}
+h3{
+  color:#FFF;
+  font-weight:bold;
+  margin-top:19px;
+}
+.menu2{
+  background-color:#f3285b;
+  border-radius:10px;
+}
+.menu2 p{
+  text-align:center;
+  color:black;
+  font-weight:bold;
+}
+nav>ul>li{
+  display:inline-block;
+  position:relative;
+  }
+
+nav>ul>li>a{
+  display:block;
+  text-decoration:none;
+  padding:0 15px;
+  line-height:50px;
+  color:white;
+  font-weight:bold;
+  }
+nav>ul>li>a:hover{
+  color:#FF9900
+}
+nav>ul{
+  padding:0px;
+  margin:0px;
+  list-style:none;
+  border-radius:10px;
+  background-color:#f73969;
+  text-align:center;
+  }
+nav ul ul{
+  position:absolute;
+  display:none;
+  padding:0px;
+  margin:0px;
+  list-style:none;
+  width:250px;
+  }
+nav ul ul a{
+  display:block;
+  line-height:30px;
+  background-color:#f73969;
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  padding:10px 10px;}
+nav > ul > li:hover>ul{
+  display:block;
+}
+nav ul ul a:hover{
+  color:#FF0;
+}
+.a img{
+transition-duration: 0.5s;
+}
+.a img:hover{
+transform:scale(1.5);
+}
+
+
+
+/*shopbook*/

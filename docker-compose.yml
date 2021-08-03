@@ -1,0 +1,50 @@
+version: '3'
+services:
+  db:
+    image: nouchka/sqlite3
+    container_name: db_fashionruby
+    tty: true
+    ports:
+      - 8001:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db-data:/root/db/
+    networks:
+      - fashion_network
+
+  app:
+    container_name: app_fashionruby
+    image: ruby_fashion
+    tty: true
+    depends_on:
+      - db
+    stdin_open: true
+    command: >
+      sh -c 'rm -f tmp/pids/server.pid;
+              bundle install --jobs 4 &&
+              bundle exec rails s -b 0.0.0.0'
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    volumes:
+      - .:/Fashion
+      - db-bundle:/usr/local/bundle
+    ports:
+      - 8888:3000
+    environment:
+      DATABASE_HOST: mysql
+      DATABASE_USER_NAME: root
+      DATABASE_PASSWORD: root
+    networks:
+      - fashion_network
+
+volumes:
+  db-data:
+    driver: local
+  db-bundle:
+    driver: local
+
+networks:
+  fashion_network:
+    driver: bridge
