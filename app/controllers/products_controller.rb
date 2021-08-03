@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
     def index
        @catelogies = Catelogy.order :catelogy_name
           @products = Product.paginate(page: params[:page])
+			 puts @product
     end
 
  # def search_book
