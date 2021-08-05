@@ -61,6 +61,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.hosts = [
  	"ruby.luvwuse.xyz",
-  	"52.76.74.29"
+  	"52.76.74.29",
+    "localhost"
   ]
 end
